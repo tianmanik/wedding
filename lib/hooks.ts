@@ -8,9 +8,9 @@ export function useGuestInfo(): GuestInfo {
   const searchParams = useSearchParams();
   
   return {
-    name: searchParams.get('name') || "",
-    event: searchParams.get('event') || "Resepsi",
-    rsvp: searchParams.get('rsvp') || "0"
+    name:  searchParams?.get('name')  ?? "",
+    event: searchParams?.get('event') ?? "Resepsi",
+    rsvp:  searchParams?.get('rsvp')  ?? "0"
   };
 }
 
