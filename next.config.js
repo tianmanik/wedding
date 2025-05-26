@@ -3,7 +3,9 @@ const nextConfig = {
   output: 'export',
   eslint: { ignoreDuringBuilds: true },
   images: { unoptimized: true },
-  // assetPrefix supaya semua /_next/* di‐prefix /wedding/
+
+  // titik kunci: semua route + public asset akan di‐prefix "/wedding"
+  basePath: '/wedding',
   assetPrefix: '/wedding/',
 };
 
