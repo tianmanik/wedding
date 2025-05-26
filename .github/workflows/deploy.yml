@@ -1,32 +1,27 @@
-name: wedding
+name: Deploy to GitHub Pages
+
+# beri izin agar GITHUB_TOKEN bisa push ke gh-pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 on:
   push:
     branches:
-      - main    # ganti jika branch default mu bukan `main`
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 18
-
-      - name: Install deps
-        run: npm ci
-
-      - name: Build & Export
-        run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+          node-version: '18'
+      - run: npm ci
+      - run: npm run build && npm run export
+      - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          publish_branch: gh-pages
