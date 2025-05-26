@@ -47,7 +47,7 @@ export default function CoupleSection() {
                 "before:absolute before:inset-0 before:bg-gradient-to-br before:from-amber-100/30 before:to-transparent before:z-10"
               )}>
                 <Image 
-                  src="/images/cowo.jpeg" 
+                  src="/wedding/images/cowo.jpeg" 
                   alt="Bride" 
                   fill
                   className="object-cover" 
@@ -81,7 +81,7 @@ export default function CoupleSection() {
                 "before:absolute before:inset-0 before:bg-gradient-to-br before:from-amber-100/30 before:to-transparent before:z-10"
               )}>
                 <Image 
-                  src="/images/cewe.jpeg" 
+                  src="/wedding/images/cewe.jpeg" 
                   alt="Groom" 
                   fill
                   className="object-cover" 

@@ -7,16 +7,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const images = [
-  { src: "/moments/1.JPG", alt: "Couple image 1" },
-  { src: "/moments/2.JPG", alt: "Couple image 2" },
-  { src: "/moments/3.JPG", alt: "Couple image 3" },
-  { src: "/moments/4.JPG", alt: "Couple image 4" },
-  { src: "/moments/5.JPG", alt: "Couple image 5" },
-  { src: "/moments/6.JPG", alt: "Couple image 6" },
-  { src: "/moments/7.JPG", alt: "Couple image 7" },
-  { src: "/moments/8.JPG", alt: "Couple image 8" },
-  { src: "/moments/9.JPG", alt: "Couple image 9" },
-  { src: "/moments/10.JPG", alt: "Couple image 10" }
+  { src: "/wedding/moments/1.JPG", alt: "Couple image 1" },
+  { src: "/wedding/moments/2.JPG", alt: "Couple image 2" },
+  { src: "/wedding/moments/3.JPG", alt: "Couple image 3" },
+  { src: "/wedding/moments/4.JPG", alt: "Couple image 4" },
+  { src: "/wedding/moments/5.JPG", alt: "Couple image 5" },
+  { src: "/wedding/moments/6.JPG", alt: "Couple image 6" },
+  { src: "/wedding/moments/7.JPG", alt: "Couple image 7" },
+  { src: "/wedding/moments/8.JPG", alt: "Couple image 8" },
+  { src: "/wedding/moments/9.JPG", alt: "Couple image 9" },
+  { src: "/wedding/moments/10.JPG", alt: "Couple image 10" }
 ];
 
 function GalleryModal({ src, alt, onClose, onPrev, onNext }: { src: string; alt: string; onClose: () => void; onPrev: () => void; onNext: () => void; }) {
